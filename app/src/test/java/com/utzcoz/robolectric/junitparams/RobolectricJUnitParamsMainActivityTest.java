@@ -33,9 +33,6 @@ public class RobolectricJUnitParamsMainActivityTest {
         assertNotNull(mTestActivityInstance);
     }
 
-    public void testContentPresenterWithInput() {
-    }
-
     @Test
     @Parameters({"123456", "ABcdEFg", "ABcdEFg123456", "829~28+-';\"%$()"})
     public void testContentPresenterWithInput(String input) {
