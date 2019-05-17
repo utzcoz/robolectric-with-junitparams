@@ -55,6 +55,9 @@ public class RobolectricJUnitParamsProcessor extends AbstractProcessor {
                             continue;
                         }
                         JCTree.JCMethodDecl methodDecl = (JCTree.JCMethodDecl) jcTree;
+                        if (methodDecl.sym == null) {
+                            continue;
+                        }
                         Parameters annotation = methodDecl.sym.getAnnotation(Parameters.class);
                         if (annotation == null) {
                             continue;
